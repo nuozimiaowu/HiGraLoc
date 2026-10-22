@@ -1,8 +1,14 @@
 # HiGraLoc
 
-**HiGraLoc: Hierarchical Graph-Aware Text-to-Point-Cloud Localization**
+**Hierarchical Graph Alignment for Cross-Modal 3D Scene Grounding**
 
-This repository contains the anonymous code release for **HiGraLoc**, a text-to-point-cloud localization framework designed for reproducible research on **KITTI360Pose**.
+**Authors:** Tianyi Shang, Zhenyu Li
+
+**Accepted at NeurIPS 2026 (Poster).**
+
+[Paper](https://openreview.net/forum?id=FOlDXBOICc) | [Code](https://github.com/nuozimiaowu/HiGraLoc)
+
+This repository contains the official code release for **HiGraLoc**, a text-to-point-cloud localization framework designed for reproducible research on **KITTI360Pose**.
 
 Given a natural-language query, HiGraLoc retrieves the most relevant 3D point-cloud cell and optionally refines the final position with a fine localization module. The codebase is organized to help the community reproduce the main training, inference, and evaluation results described in the paper.
 
@@ -14,11 +20,10 @@ Given a natural-language query, HiGraLoc retrieves the most relevant 3D point-cl
 - Coarse-to-fine localization evaluation.
 - Weight search and visualization utilities for analysis.
 
-## Anonymous Release Notice
+## Release Notes
 
-This repository is prepared for anonymous public review/reproduction.
+This is the official public repository for HiGraLoc.
 
-- No author names, affiliations, emails, homepages, or personal identifiers are included in this README.
 - Large local artifacts are intentionally excluded, including datasets, checkpoints, logs, and generated results.
 - Any paths shown below use repository-relative placeholders so they can be reused on different machines.
 
@@ -74,7 +79,7 @@ HiGraLoc/
 └── docs/                             # notes and supplementary docs
 ```
 
-The following directories are expected locally but are not included in the anonymous repository:
+The following directories are expected locally but are not included in this repository:
 
 ```text
 HiGraLoc/
@@ -89,7 +94,7 @@ HiGraLoc/
 ### 2.1 Clone the repository
 
 ```bash
-git clone <ANONYMOUS_REPOSITORY_URL>
+git clone https://github.com/nuozimiaowu/HiGraLoc.git
 cd HiGraLoc
 ```
 
@@ -193,7 +198,7 @@ For most reproduction settings, directly using the released processed KITTI360Po
 
 ## 4. Checkpoints and External Models
 
-This anonymous repository does **not** include large model files.
+This repository does **not** include large model files.
 
 ### 4.1 Text backbone
 
@@ -523,3 +528,17 @@ evaluation/test_render_paper_retrieval_figure.py
 
 Generated visual outputs are typically saved under `results/`.
 
+## 12. Citation
+
+If you use HiGraLoc in your research, please cite:
+
+```bibtex
+@inproceedings{shang2026higraloc,
+  title = {Hierarchical Graph Alignment for Cross-Modal 3D Scene Grounding},
+  author = {Shang, Tianyi and Li, Zhenyu},
+  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
+  year = {2026},
+  note = {Accepted as a poster},
+  url = {https://openreview.net/forum?id=FOlDXBOICc}
+}
+```
